@@ -1,4 +1,4 @@
-fr main(){
+fn main(){
     //format! escribe texto a string
     //print! es lo mismo que format! pero lo imprime en la consola
     //println! es lo mismo que print! pero agrega un saltp de linea
@@ -18,6 +18,18 @@ fr main(){
         verbo = "jumps over");
 
     // se pueden invocar difernetes formatos
-    println!("Base 10:          {}", 69420);
+    println!("Base 10:              {}", 69420); //69420
+    println!("Base 2(Binario):      {:b}", 69420); //10000111100101100
+    println!("Base 8 (Octal):       {:o}", 69420); //207434
+    println!("Base 16 (Hexadecimal):{:x}", 69420); //10f2c
 
-}
+    // se pueden justificar textos con espacios
+    println!("{number:>5}", number = 1);
+
+    // se pueden justificar textos con ceros extra a la izquierda
+    println!("{number:0>5}", number = 1); //00001
+    // tambien se pueden justificar ceros extra a la derecha
+    println!("{number:0<5}", number = 1); //10000
+
+
+}   
